@@ -16,7 +16,7 @@ def SAMS_hash(data):
     for i,b in enumerate(bytes):
         hashval ^= b
         if i % 8 == 0:
-            hashval *= b
+            hashval ^= b
         if i % 6 == 0:
             hashval += prime
 
